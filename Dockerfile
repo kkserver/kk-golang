@@ -4,7 +4,7 @@ MAINTAINER hailongz "hailongz@qq.com"
 
 RUN echo "Asia/shanghai" >> /etc/timezone
 
-RUN apk add git-core
+RUN apk add --no-cache git
 
 VOLUME /home
 
