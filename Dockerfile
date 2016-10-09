@@ -4,8 +4,12 @@ MAINTAINER hailongz "hailongz@qq.com"
 
 RUN echo "Asia/shanghai" >> /etc/timezone
 
+RUN apk add git-core
+
 VOLUME /home
 
 WORKDIR /home
 
-CMD go build
+ENV GOPATH /home
+
+CMD go get
