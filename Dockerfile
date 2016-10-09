@@ -4,12 +4,12 @@ MAINTAINER hailongz "hailongz@qq.com"
 
 RUN echo "Asia/shanghai" >> /etc/timezone
 
-RUN apk add --no-cache git
+VOLUME /main
 
-VOLUME /home
+VOLUME /go
 
-WORKDIR /home
+WORKDIR /main
 
-ENV GOPATH /home
+ENV GOPATH /go
 
-CMD go get
+CMD go build
